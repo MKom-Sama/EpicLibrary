@@ -16,5 +16,18 @@ namespace EpicLibrary
         {
             InitializeComponent();
         }
+
+        private void refreshToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.membersTableAdapter.Refresh(this.libraryDatabaseDataSet.Members);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

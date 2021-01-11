@@ -117,4 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="dataGridView1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="membersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>229, 60</value>
+  </metadata>
+  <metadata name="libraryDatabaseDataSetBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 17</value>
+  </metadata>
+  <metadata name="libraryDatabaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="refreshToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>456, 60</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="refreshToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAUxJREFUOE/N
+        Uj1LA0EQXRVtbncLEf0Rio2NjY3g7l1hGUXtbSwEsbMJ6UXBKlV270KQ/BQ/WitLMSLWohGNb/bmOE49
+        sMyDJTfvvZnZzI4YH2jbiUWjP0Xf0voLZf2Iz7uy7kkZn0mTLgXzT+ikswrjUFvfCkSjPxPFbkcmWUsb
+        t6eMO4Z+Q8Wk8dvBU2A26WoI9zjU7RNd1lmqotmclNadwfOG30VmhQCRcnJ+jH9Qm705lqvIi9ziL/aY
+        KUHJELc4rIWK/RG8Aw5L/LcAzQDeLw5LEPlrQH+AmlAzDkuAfMYrHHJYi9oCSL5UNr0SYjTBVAV4nXkk
+        PlJycSrDjGK/DBJL409p2kxXoGy2Bv2DC9wtmDRiKYe26S6EISZ9HZbHuH0Zp2254Q7ESnuaPLjJCZ76
+        tXYr6SZI6qLQC3cqrnseDFj3sPZjAiG+AQ4djuOlRRxAAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="membersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>547, 17</value>
+  </metadata>
+  <metadata name="membersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 60</value>
+  </metadata>
 </root>

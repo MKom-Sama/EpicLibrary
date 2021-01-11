@@ -8,9 +8,9 @@ namespace EpicLibrary
 {
     abstract class Member
     {
-        int ID;
-        string name;
-        string phoneNumber;
+        public int ID;
+        public string name;
+        public string phoneNumber;
 
         public Member(int ID,string name,string phoneNumber)
         {

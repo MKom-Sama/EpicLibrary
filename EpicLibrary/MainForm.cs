@@ -9,10 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 namespace EpicLibrary
 {
+    
     public partial class MainForm : Form
     {
+       
 
         // Giving dragging power to panels ( pain )
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -26,7 +29,6 @@ namespace EpicLibrary
         public MainForm()
         {
             InitializeComponent();
-           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,5 +68,6 @@ namespace EpicLibrary
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+   
     }
 }

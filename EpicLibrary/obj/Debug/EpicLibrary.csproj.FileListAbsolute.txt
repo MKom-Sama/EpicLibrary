@@ -24,3 +24,5 @@ D:\VSProjects\EpicLibrary\EpicLibrary\bin\Debug\EpicLibrary.application
 D:\VSProjects\EpicLibrary\EpicLibrary\obj\Debug\EpicLibrary.TrustInfo.xml
 D:\VSProjects\EpicLibrary\EpicLibrary\obj\Debug\EpicLibrary.exe.manifest
 D:\VSProjects\EpicLibrary\EpicLibrary\obj\Debug\EpicLibrary.application
+D:\VSProjects\EpicLibrary\EpicLibrary\bin\Debug\LibraryDatabase.mdf
+D:\VSProjects\EpicLibrary\EpicLibrary\bin\Debug\LibraryDatabase_log.ldf

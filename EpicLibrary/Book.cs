@@ -9,11 +9,11 @@ namespace EpicLibrary
 {
     abstract class Book
     {
-        int ID;
-        string name;
-        string author;
-        double rating;
-        int quantity;
+        public int ID;
+        public string name;
+        public string author;
+        public double rating;
+        public int quantity;
 
         public Book(int ID,string name,string author,double rating,int quantity)
         {
