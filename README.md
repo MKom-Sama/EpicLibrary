@@ -15,6 +15,7 @@ The completed project should be something like this:
 - Cool Modern Look.
 - Added Tables to the app.
 - User Can Now Add Books and Members to Database.
+- Added Live Folder for the Published App Setup.
 
 ## Wanted Features
 
