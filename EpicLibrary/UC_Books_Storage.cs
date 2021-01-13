@@ -15,6 +15,14 @@ namespace EpicLibrary
         public UC_Books_Storage()
         {
             InitializeComponent();
+            try
+            {
+                this.booksTableAdapter.Refresh(this.libraryDatabaseDataSet.Books);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void refreshToolStripButton_Click(object sender, EventArgs e)

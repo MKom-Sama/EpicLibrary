@@ -32,23 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Members_ViewMembers));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.membersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.refreshToolStrip = new System.Windows.Forms.ToolStrip();
-            this.refreshToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.libraryDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.libraryDatabaseDataSet = new EpicLibrary.LibraryDatabaseDataSet();
-            this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.membersTableAdapter = new EpicLibrary.LibraryDatabaseDataSetTableAdapters.MembersTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.membersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.libraryDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libraryDatabaseDataSet = new EpicLibrary.LibraryDatabaseDataSet();
+            this.refreshToolStrip = new System.Windows.Forms.ToolStrip();
+            this.refreshToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.membersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.membersTableAdapter = new EpicLibrary.LibraryDatabaseDataSetTableAdapters.MembersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource1)).BeginInit();
-            this.refreshToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDatabaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDatabaseDataSet)).BeginInit();
+            this.refreshToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,51 +86,6 @@
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.Size = new System.Drawing.Size(802, 313);
             this.dataGridView1.TabIndex = 5;
-            // 
-            // membersBindingSource1
-            // 
-            this.membersBindingSource1.DataMember = "Members";
-            this.membersBindingSource1.DataSource = this.libraryDatabaseDataSetBindingSource;
-            // 
-            // refreshToolStrip
-            // 
-            this.refreshToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.refreshToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.refreshToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.refreshToolStripButton});
-            this.refreshToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.refreshToolStrip.Name = "refreshToolStrip";
-            this.refreshToolStrip.Size = new System.Drawing.Size(802, 27);
-            this.refreshToolStrip.TabIndex = 6;
-            this.refreshToolStrip.Text = "refreshToolStrip";
-            // 
-            // refreshToolStripButton
-            // 
-            this.refreshToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.refreshToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshToolStripButton.Image")));
-            this.refreshToolStripButton.Name = "refreshToolStripButton";
-            this.refreshToolStripButton.Size = new System.Drawing.Size(29, 24);
-            this.refreshToolStripButton.Text = "Refresh";
-            this.refreshToolStripButton.Click += new System.EventHandler(this.refreshToolStripButton_Click);
-            // 
-            // libraryDatabaseDataSetBindingSource
-            // 
-            this.libraryDatabaseDataSetBindingSource.DataSource = this.libraryDatabaseDataSet;
-            this.libraryDatabaseDataSetBindingSource.Position = 0;
-            // 
-            // libraryDatabaseDataSet
-            // 
-            this.libraryDatabaseDataSet.DataSetName = "LibraryDatabaseDataSet";
-            this.libraryDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // membersBindingSource
-            // 
-            this.membersBindingSource.DataMember = "Members";
-            this.membersBindingSource.DataSource = this.libraryDatabaseDataSet;
-            // 
-            // membersTableAdapter
-            // 
-            this.membersTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -176,6 +131,52 @@
             this.typeDataGridViewTextBoxColumn.MinimumWidth = 100;
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.typeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // membersBindingSource1
+            // 
+            this.membersBindingSource1.DataMember = "Members";
+            this.membersBindingSource1.DataSource = this.libraryDatabaseDataSetBindingSource;
+            // 
+            // libraryDatabaseDataSetBindingSource
+            // 
+            this.libraryDatabaseDataSetBindingSource.DataSource = this.libraryDatabaseDataSet;
+            this.libraryDatabaseDataSetBindingSource.Position = 0;
+            // 
+            // libraryDatabaseDataSet
+            // 
+            this.libraryDatabaseDataSet.DataSetName = "LibraryDatabaseDataSet";
+            this.libraryDatabaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // refreshToolStrip
+            // 
+            this.refreshToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.refreshToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.refreshToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripButton});
+            this.refreshToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.refreshToolStrip.Name = "refreshToolStrip";
+            this.refreshToolStrip.Size = new System.Drawing.Size(802, 27);
+            this.refreshToolStrip.TabIndex = 6;
+            this.refreshToolStrip.Text = "refreshToolStrip";
+            // 
+            // refreshToolStripButton
+            // 
+            this.refreshToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.refreshToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshToolStripButton.Image")));
+            this.refreshToolStripButton.Name = "refreshToolStripButton";
+            this.refreshToolStripButton.Size = new System.Drawing.Size(29, 24);
+            this.refreshToolStripButton.Text = "Refresh";
+            this.refreshToolStripButton.Click += new System.EventHandler(this.refreshToolStripButton_Click);
+            // 
+            // membersBindingSource
+            // 
+            this.membersBindingSource.DataMember = "Members";
+            this.membersBindingSource.DataSource = this.libraryDatabaseDataSet;
+            // 
+            // membersTableAdapter
+            // 
+            this.membersTableAdapter.ClearBeforeFill = true;
             // 
             // UC_Members_ViewMembers
             // 
@@ -185,12 +186,13 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "UC_Members_ViewMembers";
             this.Size = new System.Drawing.Size(802, 387);
+            this.Load += new System.EventHandler(this.UC_Members_ViewMembers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource1)).EndInit();
-            this.refreshToolStrip.ResumeLayout(false);
-            this.refreshToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDatabaseDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDatabaseDataSet)).EndInit();
+            this.refreshToolStrip.ResumeLayout(false);
+            this.refreshToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

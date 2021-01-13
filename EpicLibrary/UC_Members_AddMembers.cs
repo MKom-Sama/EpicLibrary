@@ -54,8 +54,11 @@ namespace EpicLibrary
             }
 
             AddMemberToDB(member.ID, member.name, member.phoneNumber, type);
+
+            ClearInputs();
+
             
-         }
+        }
 
         public void AddMemberToDB(int id,string name,string phoneNumber,string type)
         {
@@ -80,6 +83,13 @@ namespace EpicLibrary
             
                 //MessageBox.Show("Number of People in DB : " + rows);
             }
+        }
+
+        public void ClearInputs()
+        {
+            textBox3.Text = "";
+            textBox1.Text = "";
+            textBox4.Text = "";
         }
     }
 }

@@ -15,9 +15,18 @@ namespace EpicLibrary
         public UC_Members_ViewMembers()
         {
             InitializeComponent();
+            try
+            {
+                this.membersTableAdapter.Refresh(this.libraryDatabaseDataSet.Members);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
         }
 
-        private void refreshToolStripButton_Click(object sender, EventArgs e)
+        public void refreshToolStripButton_Click(object sender, EventArgs e)
         {
             try
             {
@@ -28,6 +37,18 @@ namespace EpicLibrary
                 System.Windows.Forms.MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void UC_Members_ViewMembers_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.membersTableAdapter.Refresh(this.libraryDatabaseDataSet.Members);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
     }
 }

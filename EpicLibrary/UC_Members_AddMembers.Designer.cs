@@ -117,7 +117,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(186, 49);
             this.button1.TabIndex = 15;
-            this.button1.Text = "Add Student";
+            this.button1.Text = "Add Member";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

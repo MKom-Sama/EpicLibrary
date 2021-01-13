@@ -59,11 +59,14 @@ namespace EpicLibrary
             // Book Info now should be added to a Database
             AddBookToDB(book.ID, book.name, book.author, type, book.quantity, (decimal)book.rating, (decimal)price);
 
+            clearInputs();
             MessageBox.Show("Books Added :)");
+
 
         }
 
-        public void AddBookToDB(int ID, string name, string author, string type, int quantity, decimal rating, decimal price)
+       
+      public void AddBookToDB(int ID, string name, string author, string type, int quantity, decimal rating, decimal price)
         {
             string query =
               "INSERT INTO Books " +
@@ -87,5 +90,14 @@ namespace EpicLibrary
 
             }
         }
+      public void clearInputs()
+        {
+            textBox1.Text = "";
+            textBox4.Text = "";
+            textBox2.Text = "";
+            numericUpDown1.Value = 1;
+            textBox3.Text = "";
+            numericUpDown2.Value = 1;
+        }    
     }
 }
