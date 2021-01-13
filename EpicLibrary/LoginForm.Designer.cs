@@ -66,6 +66,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             // 
             // label2
             // 
@@ -115,6 +116,7 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Mohammed Komsany";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             // 
             // label6
             // 
@@ -126,6 +128,7 @@
             this.label6.Size = new System.Drawing.Size(197, 38);
             this.label6.TabIndex = 11;
             this.label6.Text = "HarmonyApp";
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             // 
             // label1
             // 
@@ -137,6 +140,7 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Made by yours truly";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             // 
             // pictureBox2
             // 
@@ -147,6 +151,7 @@
             this.pictureBox2.TabIndex = 13;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             // 
             // button2
             // 
@@ -183,6 +188,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

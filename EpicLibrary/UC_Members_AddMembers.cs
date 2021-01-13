@@ -25,35 +25,43 @@ namespace EpicLibrary
             InitializeComponent();
 
             // credentials for database    
-            connectionString = ConfigurationManager.ConnectionStrings["EpicLibrary.Properties.Settings.LibraryDatabaseConnectionString"].ConnectionString;
+            //connectionString = ConfigurationManager.ConnectionStrings["EpicLibrary.Properties.Settings.LibraryDatabaseConnectionString"].ConnectionString;
         }
        
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int ID = Convert.ToInt32(textBox3.Text);
-            string name = textBox1.Text;
-            string phoneNumber = textBox4.Text;
-
-
-            Member member = null;
-            string type = "nullValue";
-            // Student Member
-            if (radioButton1.Checked)
+            try
             {
-                member = new Student(ID, name, phoneNumber);
-                type = "student";
-            }
-              
+                int ID = Convert.ToInt32(textBox3.Text);
+                string name = textBox1.Text;
+                string phoneNumber = textBox4.Text;
 
-            // Staff Member 
-            if (radioButton2.Checked)
+
+                Member member = null;
+                string type = "nullValue";
+                // Student Member
+                if (radioButton1.Checked)
+                {
+                    member = new Student(ID, name, phoneNumber);
+                    type = "student";
+                }
+
+
+                // Staff Member 
+                if (radioButton2.Checked)
+                {
+                    member = new Staff(ID, name, phoneNumber);
+                    type = "staff";
+                }
+
+                AddMemberToDB(member.ID, member.name, member.phoneNumber, type);
+
+            }catch(FormatException exception)
             {
-                member = new Staff(ID, name, phoneNumber);
-                type = "staff";
+                MessageBox.Show("Invalid Input Try again :)");
             }
 
-            AddMemberToDB(member.ID, member.name, member.phoneNumber, type);
 
             ClearInputs();
 
@@ -66,7 +74,7 @@ namespace EpicLibrary
                 "INSERT INTO Members " +
                 "VALUES(@memberID,@memberName,@phoneNumber,@type)";
 
-            using (connection = new SqlConnection(connectionString))
+            using (connection = new SqlConnection(ConfigurationManager.ConnectionStrings["EpicLibrary.Properties.Settings.LibraryDatabaseConnectionString"].ConnectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 connection.Open();
@@ -77,8 +85,17 @@ namespace EpicLibrary
                 command.Parameters.AddWithValue("@type", type);
 
 
+                try
+                {
+                    command.ExecuteScalar();
 
-                command.ExecuteScalar();
+                }catch(SqlException exception)
+                {
+                    int duplicateKey = id; // if !null value
+                    MessageBox.Show(exception.Message);
+
+                 
+                }
                 
             
                 //MessageBox.Show("Number of People in DB : " + rows);

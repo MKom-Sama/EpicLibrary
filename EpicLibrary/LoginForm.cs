@@ -8,11 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+using System.Runtime.InteropServices;
+
 namespace EpicLibrary
 {
     
     public partial class LoginForm : Form
     {
+
+        // Giving dragging power to panels ( pain )
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         static MainForm mainForm = new MainForm();
        
         public LoginForm()
@@ -68,6 +81,15 @@ namespace EpicLibrary
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
     }
 }

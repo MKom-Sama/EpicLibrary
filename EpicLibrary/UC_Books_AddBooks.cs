@@ -18,50 +18,55 @@ namespace EpicLibrary
     public partial class UC_Books_AddBooks : UserControl
     {
         SqlConnection connection;
-        string connectionString;
+        string connectionString = "nullVal";
         public UC_Books_AddBooks()
         {
             InitializeComponent();
 
             // credentials for database    
-            connectionString = ConfigurationManager.ConnectionStrings["EpicLibrary.Properties.Settings.LibraryDatabaseConnectionString"].ConnectionString;
+            //connectionString = ConfigurationManager.ConnectionStrings["EpicLibrary.Properties.Settings.LibraryDatabaseConnectionString"].ConnectionString;
         }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int bookID = Convert.ToInt32(textBox1.Text);
-            string bookName = textBox4.Text;
-            double price = Convert.ToDouble(textBox2.Text);
-            int quantity = Convert.ToInt32(numericUpDown1.Value);
-            string authorName = textBox3.Text;
-            decimal rating = numericUpDown2.Value;
-
-            Book book = null;
-            string type = "nullVal";
-
-            // Rented Book
-            if (radioButton1.Checked)
+            try
             {
-                book = new RentedBook(bookID, bookName,authorName, quantity,(double)rating, price);
-                type = "buy";
+                int bookID = Convert.ToInt32(textBox1.Text);
+                string bookName = textBox4.Text;
+                double price = Convert.ToDouble(textBox2.Text);
+                int quantity = Convert.ToInt32(numericUpDown1.Value);
+                string authorName = textBox3.Text;
+                decimal rating = numericUpDown2.Value;
+                Book book = null;
+                string type = "nullVal";
+
+                // Rented Book
+                if (radioButton1.Checked)
+                {
+                    book = new RentedBook(bookID, bookName, authorName, quantity, (double)rating, price);
+                    type = "buy";
+                }
+
+
+                // Bought Book
+                if (radioButton2.Checked)
+                {
+                    book = new BoughtBook(bookID, bookName, authorName, quantity, (double)rating, price);
+                    type = "rent";
+                }
+
+
+                // Book Info now should be added to a Database
+                AddBookToDB(book.ID, book.name, book.author, type, book.quantity, (decimal)book.rating, (decimal)price);
+
+            }
+            catch (FormatException exception)
+            {
+                MessageBox.Show("Invalid Input Try again :)");
             }
 
-
-            // Bought Book
-            if (radioButton2.Checked)
-            {
-                book = new BoughtBook(bookID, bookName,authorName, quantity, (double)rating, price);
-                type = "rent";
-            }
-
-
-            // Book Info now should be added to a Database
-            AddBookToDB(book.ID, book.name, book.author, type, book.quantity, (decimal)book.rating, (decimal)price);
-
-            clearInputs();
-            MessageBox.Show("Books Added :)");
-
+            clearInputs();      
 
         }
 
@@ -72,7 +77,7 @@ namespace EpicLibrary
               "INSERT INTO Books " +
               "VALUES(@bookID,@bookName,@author,@type,@quantity,@rating,@price)";
 
-            using (connection = new SqlConnection(connectionString))
+            using (connection = new SqlConnection(ConfigurationManager.ConnectionStrings["EpicLibrary.Properties.Settings.LibraryDatabaseConnectionString"].ConnectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 connection.Open();
@@ -85,8 +90,15 @@ namespace EpicLibrary
                 command.Parameters.AddWithValue("@rating", rating);
                 command.Parameters.AddWithValue("@price", price);
 
-
-                command.ExecuteScalar();
+                try
+                {
+                    command.ExecuteScalar();
+                }
+                catch(SqlException exception)
+                {
+                    int duplicateKey = ID; // if !null value
+                    MessageBox.Show(exception.Message);
+                }                
 
             }
         }

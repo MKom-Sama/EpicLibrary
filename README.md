@@ -13,18 +13,11 @@ The completed project should be something like this:
 ## Current Version
 
 - Cool Modern Look.
-- Added Tables to the app.
-- User Can Now Add Books and Members to Database.
-- Added Live Folder for the Published App Setup.
 
 ## Wanted Features
 
+- Link a Database.
 - Validate User Input.
-- User Authentication.
-
-## Found Bugs
-
-- UC_Books and UC_Members got Errors but doesn't seem to be breaking errors.
 
 ### If you have any ideas or want to contribute feel free to hit me up .
 
