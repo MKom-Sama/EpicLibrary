@@ -12,10 +12,12 @@ The completed project should be something like this:
 
 ## Current Version
 
-- Cool Modern Look.
-- Added Tables to the app.
-- User Can Now Add Books and Members to Database.
-- Added Live Folder for the Published App Setup.
+- Cool Modern Look. _Beta 1.0_
+- Added Tables to the app. _Beta 2.0_
+- User Can Now Add Books and Members to Database. _Beta 2.0_
+- Added Live Folder for the Published App Setup. _Beta 2.0_
+- Live Folder can now run on different windows machines. _Beta 3.0_
+
 
 ## Wanted Features
 
