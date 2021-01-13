@@ -12,12 +12,21 @@ The completed project should be something like this:
 
 ## Current Version
 
-- Cool Modern Look.
+- Cool Modern Look. _Beta 1.0_
+- Added Tables to the app. _Beta 2.0_
+- User Can Now Add Books and Members to Database. _Beta 2.0_
+- Added Live Folder for the Published App Setup. _Beta 2.0_
+- Live Folder can now run on different windows machines. _Beta 3.0_
+
 
 ## Wanted Features
 
-- Link a Database.
 - Validate User Input.
+- User Authentication.
+
+## Found Bugs
+
+- UC_Books and UC_Members got Errors but doesn't seem to be breaking errors.
 
 ### If you have any ideas or want to contribute feel free to hit me up .
 
