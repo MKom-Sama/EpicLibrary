@@ -42,24 +42,42 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EpicLibrary.exe" size="651232">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EpicLibrary.exe" size="836576">
       <assemblyIdentity name="EpicLibrary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>j0yOHdqmIamY9lmI+qKsI9WBVUgkBaqVEeANEu9BtBc=</dsig:DigestValue>
+        <dsig:DigestValue>a5cn6vSsGvNcyxIIM7HN+w/q7PkrlgTpIjuik+VaDc4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="EpicLibrary.exe.config" size="189">
+  <file name="EpicLibrary.exe.config" size="568">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+      <dsig:DigestValue>CX7cIXMXxUf0DkV8ewsCd5OIo2fsjzMNcUgcI6oieeU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="LibraryDatabase.mdf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>wyTSjFNDeBCS/WRtL1G2ryWswlhlfzgmMOP/DmFG9xQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="LibraryDatabase_log.ldf" size="8388608" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>FfR2BNU3/hxFHriSTckIyZ4V3T+uWrjy1tt1heffDgc=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
@@ -79,4 +97,4 @@
       <!--<supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />-->
     </application>
   </compatibility>
-<publisherIdentity name="CN=DESKTOP-KUIJ1BE\M.kom" issuerKeyHash="c9247798c28184677e6653c6f602648d6df9c295" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>URc2HmUylH01JE9eyW1YrPNk5nw0cv6o6ow6jFQnOVU=</DigestValue></Reference></SignedInfo><SignatureValue>TB96roeJFdqkrPEl0jq618HjjpIsfVDSUuIechKGnymqm0iijEtQYXL7URgCSCiMD0MOiIvyECkk5m5mTHoqzIJcogeZSO8VFLCbVKfDQeYJGron3gvgVG4N15pdCrymaqEQZDnEoY3g95sqTaNzbgqxUqL3VjaTx/jQLtg5CtQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>+pcYr76AnDuFZfyDBesZdxZmjg4400cVVLAPVrJEpds8sUgMTQP4CkrY8u1g8EOkxhe5ohV7/8F2alloFVUwoJMAGlPhJqxlXPrbJ3pXS9gc2eTG8qbOBOMT9oaXl62lTqMYoR0f1SbCLna0SWEK+vVbwr7mFpLzlkyTSplAGlU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="553927548c3a8ceaa8fe72347ce664f3ac586dc95e4f24357d9432651e361751" Description="" Url=""><as:assemblyIdentity name="EpicLibrary.exe" version="1.0.0.0" publicKeyToken="a5f2c5396d73fd1d" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-KUIJ1BE\M.kom</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>iniwfaN5m9dmAus0OKNa4tdWlbDSVhGb/t4hSEIaAt0=</DigestValue></Reference></SignedInfo><SignatureValue>3m3/lpQIwG0tetc2h0aYkmz7v4UBEDCZWWI4QRCpyUglMZtqdwDj3GjjgWxw+K3518MVaSGMVGOcyTZpyeGnnhjhN7k6YfrqhszFd1191kKcgzlZQBprCYiu1x5uGqJKQBB69UML2jDzFJHNuE9c8XRYdpiFZwtDOrqe90+45U4=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>+pcYr76AnDuFZfyDBesZdxZmjg4400cVVLAPVrJEpds8sUgMTQP4CkrY8u1g8EOkxhe5ohV7/8F2alloFVUwoJMAGlPhJqxlXPrbJ3pXS9gc2eTG8qbOBOMT9oaXl62lTqMYoR0f1SbCLna0SWEK+vVbwr7mFpLzlkyTSplAGlU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQV7/DbsAA07NNX3NyCsgoAjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEsAVQBJAEoAMQBCAEUAXABNAC4AawBvAG0wHhcNMjEwMTA1MTQ0MTAxWhcNMjIwMTA1MjA0MTAxWjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEsAVQBJAEoAMQBCAEUAXABNAC4AawBvAG0wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAPqXGK++gJw7hWX8gwXrGXcWZo4OONNHFVSwD1ayRKXbPLFIDE0D+ApK2PLtYPBDpMYXuaIVe//BdmpZaBVVMKCTABpT4SasZVz62yd6V0vYHNnkxvKmzgTjE/aGl5etpU6jGKEdH9Umwi52tElhCvr1W8K+5haS85ZMk0qZQBpVAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAxlfY2Ja8j8OhSTvWB+65oTkVEB/70ldD0F9vRx0ZovvHAC7JJXVuGPHRVtOgOocKAPDYIdvJZ3tViWJIyFYP3ew1QitYOQJ4juz4O+wdhPUW3DmZKIXOK1yeNFeGvVCDZTY0n8xRfatl172KNWu6bGCFvsFeuBNgBxmtgB4rC50=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+<publisherIdentity name="CN=DESKTOP-KUIJ1BE\M.kom" issuerKeyHash="c9247798c28184677e6653c6f602648d6df9c295" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>fCHebM3LbPmVKlgeTGgkhhlXL8qR47hfUKcs6FCWQtw=</DigestValue></Reference></SignedInfo><SignatureValue>iOhoLIZcYLmllxD+YN9HXMy7noSkknz0EAeQvW55AOx55/DQS6ChDlwPF+KFqMJID+1Vy/gpW7lOx/EkOvhx2kEO24B2d7sG8MEzoZgEQoT3qKap1OEEkJc4XgOyvqB0xPYoT1ji6YXEj//UPzzrqb/uLUCrCx3/QKf8p6i34Qk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>+pcYr76AnDuFZfyDBesZdxZmjg4400cVVLAPVrJEpds8sUgMTQP4CkrY8u1g8EOkxhe5ohV7/8F2alloFVUwoJMAGlPhJqxlXPrbJ3pXS9gc2eTG8qbOBOMT9oaXl62lTqMYoR0f1SbCLna0SWEK+vVbwr7mFpLzlkyTSplAGlU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="dc429650e82ca7505fb8e391ca2f57198624684c1e582a95f96ccbcd6cde217c" Description="" Url=""><as:assemblyIdentity name="EpicLibrary.exe" version="1.0.0.0" publicKeyToken="a5f2c5396d73fd1d" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-KUIJ1BE\M.kom</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>5yrqwIv6TM3f/SX0lhedBF//SQymzXW1JM2b98SfbuU=</DigestValue></Reference></SignedInfo><SignatureValue>3LNfnqx0C4WMWnxHHG6UTmhCNbzVwe8BJxXMvTKCGzVDtI4WNBoUtUad/8GoPXXw95UhsHf+b1HWR+UkFi/6oRsMHrvm+cmv8GB1rF8JaAo6yseAD1vKHPujEzaElEtWxU6tM2WsQGDxF1oZrK0EtJBiuqt2YuwdFMF5PSryovw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>+pcYr76AnDuFZfyDBesZdxZmjg4400cVVLAPVrJEpds8sUgMTQP4CkrY8u1g8EOkxhe5ohV7/8F2alloFVUwoJMAGlPhJqxlXPrbJ3pXS9gc2eTG8qbOBOMT9oaXl62lTqMYoR0f1SbCLna0SWEK+vVbwr7mFpLzlkyTSplAGlU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQV7/DbsAA07NNX3NyCsgoAjANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEsAVQBJAEoAMQBCAEUAXABNAC4AawBvAG0wHhcNMjEwMTA1MTQ0MTAxWhcNMjIwMTA1MjA0MTAxWjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAEsAVQBJAEoAMQBCAEUAXABNAC4AawBvAG0wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAPqXGK++gJw7hWX8gwXrGXcWZo4OONNHFVSwD1ayRKXbPLFIDE0D+ApK2PLtYPBDpMYXuaIVe//BdmpZaBVVMKCTABpT4SasZVz62yd6V0vYHNnkxvKmzgTjE/aGl5etpU6jGKEdH9Umwi52tElhCvr1W8K+5haS85ZMk0qZQBpVAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAxlfY2Ja8j8OhSTvWB+65oTkVEB/70ldD0F9vRx0ZovvHAC7JJXVuGPHRVtOgOocKAPDYIdvJZ3tViWJIyFYP3ew1QitYOQJ4juz4O+wdhPUW3DmZKIXOK1yeNFeGvVCDZTY0n8xRfatl172KNWu6bGCFvsFeuBNgBxmtgB4rC50=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
