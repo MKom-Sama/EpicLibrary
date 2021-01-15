@@ -125,9 +125,9 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(71)))), ((int)(((byte)(161)))));
             this.label6.Location = new System.Drawing.Point(76, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(197, 38);
+            this.label6.Size = new System.Drawing.Size(161, 38);
             this.label6.TabIndex = 11;
-            this.label6.Text = "HarmonyApp";
+            this.label6.Text = "Toshokan";
             this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LoginForm_MouseMove);
             // 
             // label1

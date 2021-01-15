@@ -62,7 +62,7 @@ namespace EpicLibrary
             }
             else
             {
-                MessageBox.Show($"Wrong Input or Password BRUH");
+                MessageBox.Show("Wrong Input or Password BRUH", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBox1.Text = "";
                 textBox2.Text = "";
             }

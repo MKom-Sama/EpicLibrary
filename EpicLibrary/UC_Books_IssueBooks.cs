@@ -37,7 +37,7 @@ namespace EpicLibrary
 
             }catch(FormatException exception)
             {
-                MessageBox.Show(exception.Message);
+                MessageBox.Show("Invalid Input Try again :)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -48,14 +48,15 @@ namespace EpicLibrary
 
                 if (!BookExist(BookID))
                 {
-                    MessageBox.Show("Book Doesn't Exist!");break;
-                }
-
+                    MessageBox.Show("Book Doesn't Exist!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); break;
+                }                    
+                   
+                
                 // Check if MembersID is in MembersTable
 
                 if (!MemberExist(MemberID))
                 {
-                    MessageBox.Show("Member Doesn't Exist!");break;
+                    MessageBox.Show("Member Doesn't Exist!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error); break;
                 }
 
                 // Add BookID/MemberID/DateOFPurchase and return IssueID
@@ -145,7 +146,7 @@ namespace EpicLibrary
                 }
                 catch (SqlException exception)
                 {
-                    MessageBox.Show(exception.Message);
+                    MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return 0;
@@ -171,7 +172,7 @@ namespace EpicLibrary
                 }
                 catch (SqlException exception)
                 {
-                    MessageBox.Show(exception.Message);
+                    MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return 0;
@@ -210,7 +211,8 @@ namespace EpicLibrary
                 }
                 catch (SqlException exception)
                 {
-                    MessageBox.Show(exception.Message);
+                   
+                    MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -236,10 +238,15 @@ namespace EpicLibrary
                 }
                 catch (SqlException exception)
                 {
-                    MessageBox.Show(exception.Message);
+                    MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             return 0;
+        }
+
+        private void UC_Books_IssueBooks_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

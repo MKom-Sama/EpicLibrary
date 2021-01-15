@@ -43,6 +43,12 @@ namespace EpicLibrary
             TimeSpan daysPassed = DateTime.Now.Subtract(dateOfPurchase);
             return daysPassed.TotalDays*rentPricePerDay;
         }
+
+        public static decimal getPrice(decimal RentPrice,DateTime DateOfPurchase)
+        {
+            TimeSpan daysPassed = DateTime.Now.Subtract(DateOfPurchase);
+            return (decimal)daysPassed.TotalDays * RentPrice;
+        }
     }
 
     class BoughtBook : Book

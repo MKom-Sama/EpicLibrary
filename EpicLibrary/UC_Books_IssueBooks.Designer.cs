@@ -138,6 +138,7 @@
             this.Controls.Add(this.label5);
             this.Name = "UC_Books_IssueBooks";
             this.Size = new System.Drawing.Size(729, 335);
+            this.Load += new System.EventHandler(this.UC_Books_IssueBooks_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

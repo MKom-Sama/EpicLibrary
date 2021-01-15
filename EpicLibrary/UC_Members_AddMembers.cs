@@ -58,8 +58,8 @@ namespace EpicLibrary
                 AddMemberToDB(member.ID, member.name, member.phoneNumber, type);
 
             }catch(FormatException exception)
-            {
-                MessageBox.Show("Invalid Input Try again :)");
+            {               
+                MessageBox.Show("Invalid Input Try again :)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -92,9 +92,9 @@ namespace EpicLibrary
                 }catch(SqlException exception)
                 {
                     int duplicateKey = id; // if !null value
-                    MessageBox.Show(exception.Message);
+                   
+                    MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                 
                 }
                 
             
