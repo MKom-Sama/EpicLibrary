@@ -12,6 +12,7 @@ The completed project should be something like this:
 
 ## Current Version V1.0 _Finally_
 
+- _Extract the live.rar folder for the published app_
 - Cool Modern Look.
 - Fully Integrated management System for libraries. 
 - Add Books to DB 
