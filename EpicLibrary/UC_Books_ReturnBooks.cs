@@ -153,7 +153,7 @@ namespace EpicLibrary
 
             price = getBookPrice(BookID, dateOfPurchase);
 
-            // dont forget to increase book Quantity
+            // dont forget to increase book Quantity if its Rented
             IncreaseBookByOne(Convert.ToInt32(BookID));
 
             // also remove IssueID from table
@@ -187,7 +187,7 @@ namespace EpicLibrary
 
                         totalPrice += getBookPrice(Convert.ToInt32(BookID), Convert.ToDateTime(DateOfPurchase));
 
-                        // dont forget to increase book Quantity
+                        // dont forget to increase book Quantity if its Rented
                         IncreaseBookByOne(Convert.ToInt32(BookID)); // done :3
 
                         // Remove IssueID
@@ -251,10 +251,15 @@ namespace EpicLibrary
                 command.Parameters.AddWithValue("@bookID", BookID);
                 try
                 {
+                    
                     int Quantity = (int)command.ExecuteScalar();
                     return Quantity;
                 }
                 catch (SqlException exception)
+                {
+                    MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (NullReferenceException exception)
                 {
                     MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -273,7 +278,7 @@ namespace EpicLibrary
             string query =
               "UPDATE Books " +
               "SET Quantity = @updatedQuantity " +
-              "WHERE BookID = @bookID;";
+              "WHERE BookID = @bookID AND Type = @type;";
 
             using (connection = new SqlConnection(ConfigurationManager.ConnectionStrings["EpicLibrary.Properties.Settings.LibraryDatabaseConnectionString"].ConnectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
@@ -282,6 +287,7 @@ namespace EpicLibrary
 
                 command.Parameters.AddWithValue("@bookID", BookID);
                 command.Parameters.AddWithValue("@updatedQuantity", UpdatedQuantity);
+                command.Parameters.AddWithValue("@type","rent");
 
                 try
                 {

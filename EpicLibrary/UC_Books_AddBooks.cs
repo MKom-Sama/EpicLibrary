@@ -19,7 +19,8 @@ namespace EpicLibrary
     {
         SqlConnection connection;
         string connectionString = "nullVal";
-        bool isAddingQuantity = false;
+        bool isAddingQuantity = false;       // for epic autoFill Feature
+        int bookID = 0;                     // for epic autoFill Feature
         public UC_Books_AddBooks()
         {
             InitializeComponent();
@@ -31,12 +32,13 @@ namespace EpicLibrary
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (!isAddingQuantity)
             {
-                enableInputs(true);
+                enableInputs(true);               
                 try
                 {
-                    int bookID = Convert.ToInt32(textBox1.Text);
+                    bookID = Convert.ToInt32(textBox1.Text);
                     string bookName = textBox4.Text;
                     double price = Convert.ToDouble(textBox2.Text);
                     int quantity = Convert.ToInt32(numericUpDown1.Value);
@@ -80,27 +82,54 @@ namespace EpicLibrary
 
                         }
                     }else
+                    {
                         clearInputs();
-
+                        bookID = 0;
+                    }
+                    
+                    bookID = 0;
                 }
                 catch (FormatException exception)
                 {
-                    
-                    MessageBox.Show("Invalid Input Try again :)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    clearInputs();
-                }
+                    // in case he just entered the bookID
+                    if(bookID != 0)
+                    {
+                        int duplicateKey = bookID;
+                        if (BookExist(duplicateKey))
+                        {
+                            if (MessageBox.Show("Book Already Exists, Do you wanna add more quantities to the same book?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                setBookInfo(duplicateKey); // this function Also assigns the textboxes value
+                                isAddingQuantity = true;
+                            }
+                            else
+                            {
+                                clearInputs();
+                            }
 
-               
+                        }else
+                        {
+                            MessageBox.Show("Invalid Input Try again :)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            clearInputs();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Input Try again :)", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        clearInputs();
+                    }                    
+                }               
             }
-            else
+            else 
             {
                 
-              int bookID = Convert.ToInt32(textBox1.Text);
+              bookID = Convert.ToInt32(textBox1.Text);
               int quantity = Convert.ToInt32(numericUpDown1.Value);
 
               if(MessageBox.Show($"Do you wanna add {quantity} more books to the BookID : {bookID}?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     addToBookQuantity(bookID, quantity);
+                    bookID = 0;
                 }
                 else
                 {
@@ -144,14 +173,16 @@ namespace EpicLibrary
                 }
                 catch(SqlException exception)
                 {
-                   
-                    MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     try
                     {
-                        int duplicateKey = ID; // if !null value
-                        return duplicateKey;
-                    }catch(Exception exception_1)
+                        int duplicateKey = -1;
+                            duplicateKey = ID; // if !null value
+                        
+                        if(duplicateKey != -1) return duplicateKey;
+
+                        MessageBox.Show(exception.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch(Exception exception_1)
                     {
                         MessageBox.Show(exception_1.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
