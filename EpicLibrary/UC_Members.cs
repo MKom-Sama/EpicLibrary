@@ -21,6 +21,8 @@ namespace EpicLibrary
         {
             // Add Members tab
             uC_Members_AddMembers1.BringToFront();
+
+            uC_Members_ViewMembers1.Visible = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -28,6 +30,7 @@ namespace EpicLibrary
             // View Members tab
             uC_Members_ViewMembers1.BringToFront();
 
+            uC_Members_ViewMembers1.Visible = true;
         }
     }
 }

@@ -204,6 +204,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "UC_Books_Storage";
             this.Size = new System.Drawing.Size(785, 344);
+            this.VisibleChanged += new System.EventHandler(this.refreshToolStripButton_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDatabaseDataSet)).EndInit();

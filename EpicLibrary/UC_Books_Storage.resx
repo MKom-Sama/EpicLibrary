@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dataGridView1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="booksBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>233, 17</value>
   </metadata>
@@ -135,13 +132,13 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="refreshToolStripButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAFMSURBVDhPzVI9SwNBEF0VbW53CxH9EYqNjY2N4O5dYRlF7W0sBLGzCelFwSpVdu9CkPwUP1or
-        SzEi1qIRjW/25jhOPbDMgyU3772Z2cyOGB9o24lFoz9F39L6C2X9iM+7su5JGZ9Jky4F80/opLMK41Bb
-        3wpEoz8TxW5HJllLG7enjDuGfkPFpPHbwVNgNulqCPc41O0TXdZZqqLZnJTWncHzht9FZoUAkXJyfox/
-        UJu9OZaryIvc4i/2mClByRC3OKyFiv0RvAMOS/y3AM0A3i8OSxD5a0B/gJpQMw5LgHzGKxxyWIvaAki+
-        VDa9EmI0wVQFeJ15JD5ScnEqw4xivwwSS+NPadpMV6Bstgb9gwvcLZg0YimHtukuhCEmfR2Wx7h9Gadt
-        ueEOxEp7mjy4yQme+rV2K+kmSOqi0At3Kq57HgxY97D2YwIhvgEOHY7jpUUcQAAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAUxJREFUOE/N
+        Uj1LA0EQXRVtbncLEf0Rio2NjY3g7l1hGUXtbSwEsbMJ6UXBKlV270KQ/BQ/WitLMSLWohGNb/bmOE49
+        sMyDJTfvvZnZzI4YH2jbiUWjP0Xf0voLZf2Iz7uy7kkZn0mTLgXzT+ikswrjUFvfCkSjPxPFbkcmWUsb
+        t6eMO4Z+Q8Wk8dvBU2A26WoI9zjU7RNd1lmqotmclNadwfOG30VmhQCRcnJ+jH9Qm705lqvIi9ziL/aY
+        KUHJELc4rIWK/RG8Aw5L/LcAzQDeLw5LEPlrQH+AmlAzDkuAfMYrHHJYi9oCSL5UNr0SYjTBVAV4nXkk
+        PlJycSrDjGK/DBJL409p2kxXoGy2Bv2DC9wtmDRiKYe26S6EISZ9HZbHuH0Zp2254Q7ESnuaPLjJCZ76
+        tXYr6SZI6qLQC3cqrnseDFj3sPZjAiG+AQ4djuOlRRxAAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

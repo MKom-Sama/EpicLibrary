@@ -187,6 +187,7 @@
             this.Name = "UC_Members_ViewMembers";
             this.Size = new System.Drawing.Size(802, 387);
             this.Load += new System.EventHandler(this.UC_Members_ViewMembers_Load);
+            this.VisibleChanged += new System.EventHandler(this.refreshToolStripButton_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDatabaseDataSetBindingSource)).EndInit();

@@ -26,24 +26,32 @@ namespace EpicLibrary
         {
             // Add Books tab
             uC_Books_AddBooks1.BringToFront();
+
+            uC_Books_Storage1.Visible = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             // Books Storage tab
             uC_Books_Storage1.BringToFront();
+
+            uC_Books_Storage1.Visible = true;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             // Return Books tab
             uC_Books_ReturnBooks1.BringToFront();
+
+            uC_Books_Storage1.Visible = false;
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
             // Issue Books tab
             uC_Books_IssueBooks1.BringToFront();
+
+            uC_Books_Storage1.Visible = false;
         }
     }
 }
